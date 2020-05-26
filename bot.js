@@ -15,7 +15,7 @@ bot.start((ctx) =>
 Посмотреть весь список стран можно командой /help.
 `,
         Markup.keyboard([
-            ['Russsia', 'Uzbekistan'],
+            ['Russia', 'Uzbekistan'],
             ['US', 'Canada'],
         ])
         .oneTime()
@@ -38,7 +38,7 @@ bot.on('text', async (ctx) => {
     Смертей: ${data[0][0].deaths}
     Выздоровевших: ${data[0][0].recovered}
     `;
-        ctx.reply(formatedData);
+        ctx.replyWithHTML(formatedData);
     } catch {
         ctx.reply('Вы неправильно написали название страны. Посмотрите /help');
     }
