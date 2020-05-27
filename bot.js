@@ -18,7 +18,6 @@ bot.start((ctx) =>
             ['Russia', 'Uzbekistan'],
             ['US', 'Canada'],
         ])
-        .oneTime()
         .resize()
         .extra()
     )
@@ -34,9 +33,9 @@ bot.on('text', async (ctx) => {
 
         const formatedData = `
     <b>🌏Страна🌏: ${data[0][0].country.toUpperCase()}</b>\n
-    <i>👿Случаи:</i> ${data[0][0].cases}\n
-    <i>💀Смертей:</i> ${data[0][0].deaths}\n
-    <i>💪Выздоровевших:</i> ${data[0][0].recovered}
+    <i>👿Случаи: </i>🔸${data[0][0].cases}\n
+    <i>💀Смертей: </i>🔸${data[0][0].deaths}\n
+    <i>💪Выздоровевших: </i>🔸${data[0][0].recovered}
     `;
         ctx.replyWithHTML(formatedData);
     } catch {
