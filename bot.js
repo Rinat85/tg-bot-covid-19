@@ -33,10 +33,10 @@ bot.on('text', async (ctx) => {
         data = await api.getReportsByCountries(ctx.message.text);
 
         const formatedData = `
-    <b>Страна: ${data[0][0].country}</b>\n
-    Случаи: ${data[0][0].cases}
-    Смертей: ${data[0][0].deaths}
-    Выздоровевших: ${data[0][0].recovered}
+    <b>🌏Страна🌏: ${data[0][0].country.toUpperCase()}</b>\n
+    <i>👿Случаи👿: ${data[0][0].cases}</i>\n
+    <i>💀Смертей💀: ${data[0][0].deaths}</i>\n
+    <i>💪Выздоровевших💪: ${data[0][0].recovered}</i>
     `;
         ctx.replyWithHTML(formatedData);
     } catch {
