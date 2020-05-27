@@ -34,9 +34,9 @@ bot.on('text', async (ctx) => {
 
         const formatedData = `
     <b>🌏Страна🌏: ${data[0][0].country.toUpperCase()}</b>\n
-    <i>👿Случаи👿: ${data[0][0].cases}</i>\n
-    <i>💀Смертей💀: ${data[0][0].deaths}</i>\n
-    <i>💪Выздоровевших💪: ${data[0][0].recovered}</i>
+    <i>👿Случаи:</i> ${data[0][0].cases}\n
+    <i>💀Смертей:</i> ${data[0][0].deaths}\n
+    <i>💪Выздоровевших:</i> ${data[0][0].recovered}
     `;
         ctx.replyWithHTML(formatedData);
     } catch {
